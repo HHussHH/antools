@@ -1,0 +1,162 @@
+//main: ../style.less
+.popular__tools {
+  margin-bottom: 200px;
+}
+.popular__tools__header {
+  margin-top: 200px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.popular__tools-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+.popular__tools-text {
+  margin: 0 auto;
+  max-width: 430px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.popular__tools__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.popular__tools_card {
+  width: 392px;
+  height: 294px;
+  background-color: #1e252b;
+  margin-bottom: 100px;
+  border-radius: 15px;
+
+  transition: transform 0.2s linear, background-color 0.2s linear;
+  &:hover {
+    transform: translateY(-20px);
+    background-color: rgba(40, 48, 54, 0.6);
+    &::after {
+      display: block;
+    }
+  }
+
+  position: relative;
+  &::after {
+    position: absolute;
+    display: none;
+    content: "";
+    width: 40px;
+    height: 60px;
+    border-radius: 30px;
+    filter: blur(40px);
+    background: linear-gradient(90deg, #ff6e30, #ff6e30);
+    top: 10%;
+    left: 90%;
+    transform: translateX(-95%);
+  }
+}
+
+.card-item {
+  padding: 30px;
+}
+
+.card-item__icon {
+  display: flex;
+}
+
+.card-item__icon-text {
+  & h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  & h3 {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(255, 165, 55, 0.55);
+  }
+  margin-left: 30px;
+}
+
+.card-item__text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.card-item__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__icon {
+  width: 28px;
+  height: 28px;
+
+  transition: fill 0.2s linear;
+
+  &.heart :hover {
+    fill: rgb(255, 0, 0);
+  }
+  &.favorite :hover {
+    fill: rgb(255, 165, 55);
+  }
+
+  fill: rgba(255, 255, 255, 0.38);
+}
+
+.card-item__footer-button {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: padding 0.4s linear;
+  &:hover {
+    color: #fff;
+    padding: 9px 35px;
+    background-color: #ff6e30;
+    border-radius: 8px;
+  }
+}
+.card__icon__hover {
+  margin-right: 18px;
+  &:last-child {
+    margin-right: 0px;
+  }
+  display: flex;
+
+  transition: padding 0.2s linear, background-color 0.2s linear;
+  &:hover {
+    background-color: #283036;
+    border-radius: 8px;
+    padding: 7px;
+  }
+}
+
+.card-item__footer-icon {
+  display: flex;
+}
+
+.popular__tools-btn {
+  margin: 0 auto;
+  text-decoration: none;
+  color: #ff6e30;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: auto;
+  padding: 17px 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

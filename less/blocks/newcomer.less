@@ -1,0 +1,110 @@
+//main: ../style.less
+
+.newcomer__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newcommer__col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+
+  &-first {
+    padding-top: 20px;
+    display: block;
+  }
+}
+
+.newcommer__title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.9);
+  padding-bottom: 45px;
+}
+
+.newcommer__subtitle {
+  max-width: 430px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 60px;
+}
+
+.newcommer__btn {
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 40px;
+  background-color: #ff6e30;
+  border-radius: 8px;
+}
+.newcommer__card {
+  width: 288px;
+  height: 284px;
+  background-color: #1e252b;
+
+  margin-bottom: 50px;
+}
+
+.newcommer__card__item {
+  padding: 28px 22px;
+  border-radius: 15px;
+  transition: transform 0.2s linear, background-color 0.2s linear;
+  &:hover {
+    transform: translateY(-20px);
+    background-color: rgba(40, 48, 54, 0.6);
+    &::after {
+      display: block;
+    }
+  }
+
+  position: relative;
+  &::after {
+    overflow: hidden;
+    position: absolute;
+    display: none;
+    content: "";
+    width: 40px;
+    height: 60px;
+    border-radius: 30px;
+    filter: blur(40px);
+    background: linear-gradient(90deg, #ff6e30, #ff6e30);
+    top: 10%;
+    left: 90%;
+    transform: translateX(-95%);
+  }
+}
+
+.newcommer__card-icon {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.newcommer__card-icon_text {
+  margin-left: 30px;
+}
+.newcommer__card-icon__title {
+  font-weight: 500;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.78);
+  padding-bottom: 15px;
+}
+
+.newcommer__card-icon__price {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(255, 165, 55, 0.55);
+}
+
+.newcomer__card-text {
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
